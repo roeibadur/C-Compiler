@@ -1,0 +1,14 @@
+Students names:
+1. Itzik Ariel
+2. Roei Badur
+
+Students ids:
+1. 313299505
+2. 312350671
+
+Operating system:
+Windows 10 - 64Bit
+
+Development enviroment:
+Visual Studio 17
+

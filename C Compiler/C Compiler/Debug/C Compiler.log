@@ -1,0 +1,44 @@
+﻿  ErrorHandling.c
+  symbolTable.c
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\symboltable.c(10): warning C4013: 'malloc' undefined; assuming extern returning int
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\symboltable.c(37): warning C4013: 'free' undefined; assuming extern returning int
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\symboltable.c(80): warning C4013: 'calloc' undefined; assuming extern returning int
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\symboltable.c(81): warning C4013: 'strlen' undefined; assuming extern returning int
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\symboltable.c(82): warning C4013: 'strcpy' undefined; assuming extern returning int
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\symboltable.c(103): warning C4013: 'strcmp' undefined; assuming extern returning int
+  SyntaxParser.c
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.h(41): warning C4031: second formal parameter list longer than the first list
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(217): warning C4098: 'parse_STMT_Tag': 'void' function returning a value
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(222): warning C4098: 'parse_STMT_Tag': 'void' function returning a value
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(236): warning C4098: 'parse_STMT_Tag': 'void' function returning a value
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(249): warning C4098: 'parse_STMT_Tag': 'void' function returning a value
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(254): warning C4098: 'parse_STMT_Tag': 'void' function returning a value
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(258): warning C4098: 'parse_STMT_Tag': 'void' function returning a value
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(263): warning C4098: 'parse_STMT_Tag': 'void' function returning a value
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(268): warning C4098: 'parse_STMT_Tag': 'void' function returning a value
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(274): warning C4098: 'parse_STMT_Tag': 'void' function returning a value
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(278): warning C4474: 'fprintf' : too many arguments passed for format string
+  c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(278): note: placeholders and their parameters expect 1 variadic arguments, but 2 were provided
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(279): warning C4098: 'parse_STMT_Tag': 'void' function returning a value
+  Token.c
+  win.lex.yy.c
+win.lex.yy.c(508): warning C4005: '_CRT_SECURE_NO_WARNINGS': macro redefinition
+  c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\win.lex.yy.c: note: see previous definition of '_CRT_SECURE_NO_WARNINGS'
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.h(41): warning C4031: second formal parameter list longer than the first list
+  Generating Code...
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(428): warning C4715: 'parse_TERM_Tag': not all control paths return a value
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(398): warning C4715: 'parse_FACTOR_Tag': not all control paths return a value
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(518): warning C4715: 'parse_VAR_Tag': not all control paths return a value
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(457): warning C4715: 'parse_EXPR_Tag': not all control paths return a value
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(486): warning C4715: 'parse_EXPR_LIST_Tag': not all control paths return a value
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(540): warning C4715: 'parse_RETURN_STMT_Tag': not all control paths return a value
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(558): warning C4715: 'parse_ARG_LIST_Tag': not all control paths return a value
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(605): warning C4715: 'parse_FACTOR': not all control paths return a value
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(681): warning C4715: 'parse_RETURN_STMT': not all control paths return a value
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(710): warning C4715: 'parse_ARGS': not all control paths return a value
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(956): warning C4715: 'parse_PARAMS': not all control paths return a value
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(975): warning C4715: 'parse_RETURNED_TYPE': not all control paths return a value
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(1008): warning C4715: 'parse_DIM_SIZES_Tag': not all control paths return a value
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(1021): warning C4715: 'parse_DIM_SIZES': not all control paths return a value
+c:\users\roeibadur\desktop\roei\hit\compilation\סיכומים\c compiler\c compiler\syntaxparser.c(1044): warning C4715: 'parse_TYPE': not all control paths return a value
+  C Compiler.vcxproj -> C:\Users\roeibadur\Desktop\Roei\HIT\compilation\סיכומים\C Compiler\Debug\C Compiler.exe
