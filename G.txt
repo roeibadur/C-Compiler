@@ -1,0 +1,76 @@
+GLOBAL_VARS -> VAR_DEC GLOBAL_VARS'   (X Y-0)
+GLOBAL_VARS' -> @ | VAR_DEC GLOBAL_VARS' ( A B-0 ) 
+
+VAR_DEC -> TYPE id VAR_DEC'     ( X a Y -0)
+VAR_DEC' -> ; | [DIM_SIZES]; ( a A a ) 
+
+DIM_SIZES -> int_num DIM_SIZES'   ( a A -0  ) 
+DIM_SIZES' -> @| , int_num DIM_SIZES'   ( a b A  )
+
+FUNC_PREDEFS -> FUNC_PROTOTYPE ; FUNC_PREDEFS'   ( X ; Y -0 ) 
+FUNC_PREDEFS' -> @ | FUNC_PROTOTYPE ; FUNC_PREDEFS'  ( A a B-0 ) 
+
+FUNC_FULL_DEFS ->  FUNC_WITH_BODY FUNC_FULL_DEFS'       ( A B -0 ) 
+FUNC_FULL_DEFS' -> @|  FUNC_WITH_BODY FUNC_FULL_DEFS'  ( A B -0) 
+
+PARAM_LIST -> PARAM PARAM_LIST'     ( A B-0 ) 
+PARAM_LIST' -> @ | , PARAM PARAM_LIST'  ( a A B-0)
+
+PARAM -> TYPE id PARAM'    ( A a B-0)   
+PARAM' -> @ | [ DIM_SIZES ]  ( a A a ) 	
+
+VAR_DEC_LIST -> @ | VAR_DEC VAR_DEC_LIST'   ( A B-0)
+VAR_DEC_LIST'  - > @ |  VAR_DEC VAR_DEC_LIST' ( A B-0 )
+
+STMT_LIST -> STMT STMT_LIST' ( A B-0 )
+STMT_LIST' -> @| ; STMT STMT_LIST'  ( a A B-0 ) 
+
+ARG_LIST -> EXPR ARG_LIST'  ( A B-0 ) 
+ARG_LIST' -> @ | , EXPR ARG_LIST'  ( a A B-0 ) 
+
+RETURN_STMT -> return RETURN_STMT' ( a A ) 
+RETURN_STMT' -> @ | EXPR ( Z -> A ) 
+
+VAR -> id VAR' ( a A )  
+VAR' -> @ | [ EXPR_LIST ]  ( a A a )
+
+EXPR_LIST -> EXPR EXPR_LIST' ( A B-0 ) 
+EXPR_LIST' -> @ | , EXPR EXPR_LIST'  ( a A B-0 ) 
+
+EXPR -> TERM EXPR'  ( A B-0 ) 
+EXPR' -> @ | +TERM EXPR'  ( a A B-0  ) 
+
+TERM -> FACTOR TERM' ( A B-0 )
+TERM' -> @ | *FACTOR TERM'  ( a A B-0  )
+
+PROG -> GLOBAL_VARS FUNC_PREDEFS FUNC_FULL_DEFS   (X Y1 Y2) - NOT
+
+
+FUNC_PROTOTYPE -> RETURNED_TYPE id (PARAMS)  (    A id  "("  Y ")"     ) 
+
+FUNC_WITH_BODY -> FUNC_PROTOTYPE COMP_STMT  ( A B  ) 
+
+RETURNED_TYPE ->TYPE | void    ( Z -> X ) 
+
+PARAMS -> PARAM_LIST | @ ( Z -> X ) 
+
+COMP_STMT -> { VAR_DEC_LIST STMT_LIST }  ( a 0-A  B  a) 
+
+STMT -> id STMT' | COMP_STMT | IF_STMT | RETURN_STMT             ( A |B  )
+
+STMT' ->  VAR'= EXPR   | ( ARGS )  ( A a B  )
+
+IF_STMT -> if(CONDITION)STMT  ( a b A ) B )
+
+CALL -> id( ARGS )          (a ( A-0 ) ) 
+
+ARGS -> ARG_LIST | @  ( Z-> A ) 
+
+CONDITION -> EXPR rel_op EXPR ( A a A ) 
+
+FACTOR -> id FACTOR'   | int_num | float_num | (EXPR)   
+
+FACTOR' -> ( ARGS )  | VAR'   ( a A a )  ( z->A)
+
+TYPE -> int | float 
+
